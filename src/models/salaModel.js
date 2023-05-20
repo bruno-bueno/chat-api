@@ -1,6 +1,6 @@
 const db=require("./db");
 function listarSalas(){
-    returndb.findAll("salas");
+    return db.findAll("sala");
 }
 
 module.exports={listarSalas}

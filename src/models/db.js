@@ -9,12 +9,12 @@ async function connect(){
     await client.connect();
 
     singleton=client.db(process.env.DB_DATABASE);
-    return singleton;    
+    return singleton;
 }
 
 async function findAll(collection){
     const db = await connect();
-    return db.collection(collection).findAll().toArray();
+    return db.collection(collection).find().toArray();
 }
 
 module.exports={findAll}
